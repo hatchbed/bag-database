@@ -36,7 +36,7 @@ services:
         # SSL is disabled since only the Bag Database can access this anyway.
         # Be careful about allowing anything else to access this service!  
     bagdb:
-        image: swrirobotics/bag-database:latest
+        image: ghcr.io/hatchbed/bag-database:latest
         networks:
             - bagdb
         depends_on:

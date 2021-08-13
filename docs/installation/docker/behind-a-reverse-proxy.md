@@ -49,7 +49,7 @@ services:
             - docker_cache:/var/lib/docker
         command: ["dockerd", "--host=tcp://0.0.0.0:2375"]
     bagdb:
-        image: swrirobotics/bag-database:latest
+        image: ghcr.io/hatchbed/bag-database:latest
         networks:
             - bagdb
         depends_on:

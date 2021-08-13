@@ -20,7 +20,7 @@ copy of the database container's volume.
 
 As long as you're using the same version of PostgreSQL, upgrading should be
 painless.  Pull the latest version of the Bag Database image
-(`docker pull swrirobotics/bag-database:latest`) and restarts its container;
+(`docker pull ghcr.io/hatchbed/bag-database:latest`) and restarts its container;
 if there are any database schema changes, it will automatically update everything.
 
 If you are also updating your PostgreSQL container, you will need to manually
@@ -32,7 +32,7 @@ container and it will take care of any remaining work.
 
 ## If Something Goes Wrong
 
-If you have any issues during an upgrade, first, please [submit an issue](https://github.com/swri-robotics/bag-database/issues)
+If you have any issues during an upgrade, first, please [submit an issue](https://github.com/hatchbed/bag-database/issues)
 with a copy of your Docker container configurations (omitting any passwords!) and
 the complete log output that was printed when starting the containers.  After that,
 roll back your containers to the previous versions and restore the database from
