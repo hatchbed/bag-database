@@ -8,7 +8,7 @@ permalink: /
 
 # The Bag Database
    
-![Java CI with Maven](https://github.com/swri-robotics/bag-database/workflows/Java%20CI%20with%20Maven/badge.svg)
+![Java CI with Maven](https://github.com/hatchbed/bag-database/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 The Bag Database is a web-based application that monitors a directory for ROS bag 
 files, parses their metadata, and provides a friendly web interface for searching 

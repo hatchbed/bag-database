@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -19,12 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Bag Database
-email: preed@swri.org
+email: phillipreed@hatchbed.com
 description: >- # this means to ignore newlines until "baseurl:"
   The Bag Database is a web-based application that makes it simple to catalogue
   ROS bag files, search through them, and perform operations on them.
 baseurl: "/bag-database" # the subpath of your site, e.g. /blog
-url: "https://swri-robotics.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://hatchbed.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: pjreed
 
 # Build settings

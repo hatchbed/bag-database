@@ -36,9 +36,10 @@ Ext.define('BagDatabase.views.AboutWindow', {
     bodyPadding: 5,
     constrainHeader: true,
     html: "<h2>Bag Database 3.2.0</h2>" +
-        "<p>Documentation: <a href='https://swri-robotics.github.io/bag-database/'>https://swri-robotics.github.io/bag-database/</a></p>" +
-        "<p>Source Code: <a href='https://github.com/swri-robotics/bag-database'>https://github.com/swri-robotics/bag-database</a></p>" +
+        "<p>Documentation: <a href='https://hatchbed.github.io/bag-database/'>https://hatchbed.github.io/bag-database/</a></p>" +
+        "<p>Source Code: <a href='https://github.com/hatchbed/bag-database'>https://github.com/hatchbed/bag-database</a></p>" +
         "<p>Copyright 2015-2020 Southwest Research Institute</p>" +
+        "<p>Copyright 2021 Hatchbed, L.L.C.</p>" +
         "<br>" +
         "<p>Icons provided by <a href='http://www.famfamfam.com/lab/icons/silk/'>http://www.famfamfam.com/lab/icons/silk/</a></p>" +
         "<p>A number of open source libraries were used in the creation of this software;<br>" +
