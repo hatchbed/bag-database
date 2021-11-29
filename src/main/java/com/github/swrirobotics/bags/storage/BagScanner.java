@@ -44,6 +44,7 @@ import com.github.swrirobotics.persistence.BagRepository;
 import com.github.swrirobotics.remote.GeocodingService;
 import com.github.swrirobotics.status.Status;
 import com.github.swrirobotics.status.StatusProvider;
+import com.google.common.base.Joiner;
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -118,6 +119,7 @@ public class BagScanner extends StatusProvider implements BagStorageChangeListen
         myBagService.deleteUnownedBags();
 
         for (BagStorage storage : storages) {
+            myBagStorages.put(storage.getStorageId(), storage);
             storage.addChangeListener(this);
             scanStorage(storage, false);
         }
@@ -340,6 +342,7 @@ public class BagScanner extends StatusProvider implements BagStorageChangeListen
     }
 
     public void scanAllStorages(boolean forceUpdate) {
+        myLogger.info("Scanning all storage backends: " + Joiner.on(',').join(myBagStorages.keySet()));
         for (BagStorage storage : myBagStorages.values()) {
             scanStorage(storage, forceUpdate);
         }
@@ -362,12 +365,24 @@ public class BagScanner extends StatusProvider implements BagStorageChangeListen
         myLogger.info(msg);
         try {
             myExecutor.execute(() -> {
+                // Scan for new bags and add them to the database or update any that were missing
                 TransactionCallback<Object> cb = transactionStatus -> {
                     storage.updateBagExistence();
                     storage.updateBags(forceUpdate);
                     return null;
                 };
                 transactionTemplate.execute(cb);
+
+                // After that's done, if we're configured to remove missing bags, double-check to see whether
+                // they exist now, and if not, remove them.
+                if (myConfigService.getConfiguration().getRemoveOnDeletion()) {
+                    cb = transactionStatus -> {
+                        storage.updateBagExistence();
+                        myBagService.removeMissingBags();
+                        return null;
+                    };
+                    transactionTemplate.execute(cb);
+                }
             });
         }
         catch (RuntimeException e) {
