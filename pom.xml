@@ -7,7 +7,7 @@
     <groupId>com.github.swri-robotics</groupId>
     <artifactId>bag-database</artifactId>
     <packaging>war</packaging>
-    <version>3.4.2</version>
+    <version>3.5.0</version>
     <name>Bag Database</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -219,7 +219,7 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
-            <version>3.8.9</version>
+            <version>4.4.0</version>
         </dependency>
         <dependency>
             <groupId>com.mattbertolini</groupId>
