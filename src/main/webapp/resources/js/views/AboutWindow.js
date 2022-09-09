@@ -35,7 +35,7 @@ Ext.define('BagDatabase.views.AboutWindow', {
     layout: 'fit',
     bodyPadding: 5,
     constrainHeader: true,
-    html: "<h2>Bag Database 3.4.2</h2>" +
+    html: "<h2>Bag Database 3.5.1-SNAPSHOT</h2>" +
         "<p>Documentation: <a href='https://hatchbed.github.io/bag-database/'>https://hatchbed.github.io/bag-database/</a></p>" +
         "<p>Source Code: <a href='https://github.com/hatchbed/bag-database'>https://github.com/hatchbed/bag-database</a></p>" +
         "<p>Copyright 2015-2020 Southwest Research Institute</p>" +
