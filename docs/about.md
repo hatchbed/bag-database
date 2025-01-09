@@ -22,4 +22,5 @@ Pre-built Docker images are on GitHub at [https://github.com/hatchbed/bag-databa
 
 Let us know how it works for you!
 
-Copyright (c) 2015-2020, Southwest Research Institute® (SwRI®)
+Copyright (c) 2015-2024, Southwest Research Institute® (SwRI®)
+Copyright (c) 2021-2024, Hatchbed, L.L.C.
